@@ -5,3 +5,7 @@ Name: nswdpc-feedback-assist
 SilverStripe\SiteConfig\SiteConfig:
   extensions:
     - 'NSWDPC\Waratah\Extensions\FASiteConfigExtension'
+
+Page:
+  extensions:
+    - 'NSWDPC\Waratah\Extensions\FAPageExtension'
