@@ -1,3 +1,7 @@
 ---
-Name: nswdpc-module-skeleton
+Name: nswdpc-feedback-assist
 ---
+
+SilverStripe\SiteConfig\SiteConfig:
+  extensions:
+    - 'NSWDPC\Waratah\Extensions\FASiteConfigExtension'
