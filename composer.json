@@ -23,7 +23,7 @@
         }
     ],
     "require": {
-        "silverstripe/recipe-cms": "^4.7.0"
+        "silverstripe/cms": "^4.9"
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7 | ^7",
