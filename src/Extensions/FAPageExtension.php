@@ -8,7 +8,6 @@ use SilverStripe\Forms\CheckboxField;
 
 class FAPageExtension extends DataExtension
 {
-
     private static $db = [
         'DisableFeedbackAssist' => 'Boolean'
     ];
@@ -16,7 +15,5 @@ class FAPageExtension extends DataExtension
     public function updateSettingsFields(FieldList $fields)
     {
         $fields->addFieldToTab('Root.FeedbackAssist', CheckboxField::create('DisableFeedbackAssist', "Disable Feedback Assist on this page"));
-
     }
-
 }
