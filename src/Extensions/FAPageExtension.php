@@ -1,6 +1,6 @@
 <?php
 
-namespace NSWDPC\Waratah\Extensions;
+namespace NSWDPC\FeedbackAssist\Extensions;
 
 use SilverStripe\ORM\DataExtension;
 use SilverStripe\Forms\FieldList;
