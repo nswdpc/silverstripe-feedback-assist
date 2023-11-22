@@ -4,8 +4,12 @@ Name: nswdpc-feedback-assist
 
 SilverStripe\SiteConfig\SiteConfig:
   extensions:
-    - 'NSWDPC\Waratah\Extensions\FASiteConfigExtension'
+    - 'NSWDPC\FeedbackAssist\Extensions\FASiteConfigExtension'
 
 Page:
   extensions:
-    - 'NSWDPC\Waratah\Extensions\FAPageExtension'
+    - 'NSWDPC\FeedbackAssist\Extensions\FAPageExtension'
+
+SilverStripe\CMS\Controllers\ContentController:
+  extensions:
+    - 'NSWDPC\FeedbackAssist\Extensions\FAContentControllerExtension'
