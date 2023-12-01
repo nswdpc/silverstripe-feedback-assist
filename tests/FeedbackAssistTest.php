@@ -68,6 +68,39 @@ class FeedbackAssistTest extends FunctionalTest
 
     }
 
+    public function testSiteConfigNotEnabled() {
+
+        $siteConfig = SiteConfig::current_site_config();
+        $siteConfig->EnableFeedbackAssist = 0;
+        $siteConfig->FeedbackAssistHash = '';
+        $siteConfig->write();
+
+        $page = \Page::create([
+            'Title' => 'Test Page',
+            'URLSegement' => 'test-page'
+        ]);
+        $page->publishSingle();
+
+        $this->assertEquals(0, $siteConfig->EnableFeedbackAssist);
+
+        $response = $this->get( $page->Link() );
+
+        $this->assertEquals(200, $response->getStatusCode() );
+
+        $body = $response->getBody();
+
+        $this->assertStringNotContainsString(
+            FAContentControllerExtension::FA_INIT_URL,
+            $body
+        );
+
+        $this->assertStringNotContainsString(
+            FAContentControllerExtension::FA_URL,
+            $body
+        );
+
+    }
+
     public function testSiteConfigHash() {
 
         $siteConfig = SiteConfig::current_site_config();
