@@ -44,7 +44,7 @@ class FeedbackAssistTest extends FunctionalTest
 
         $page = \Page::create([
             'Title' => 'Test Page',
-            'URLSegement' => 'test-page'
+            'URLSegment' => 'test-page'
         ]);
         $page->publishSingle();
 
@@ -77,7 +77,7 @@ class FeedbackAssistTest extends FunctionalTest
 
         $page = \Page::create([
             'Title' => 'Test Page',
-            'URLSegement' => 'test-page'
+            'URLSegment' => 'test-page'
         ]);
         $page->publishSingle();
 
@@ -110,7 +110,7 @@ class FeedbackAssistTest extends FunctionalTest
 
         $page = \Page::create([
             'Title' => 'Test Page',
-            'URLSegement' => 'test-page'
+            'URLSegment' => 'test-page'
         ]);
         $page->publishSingle();
 
@@ -148,7 +148,7 @@ class FeedbackAssistTest extends FunctionalTest
 
         $page = \Page::create([
             'Title' => 'Test Page',
-            'URLSegement' => 'test-page',
+            'URLSegment' => 'test-page',
             'DisableFeedbackAssist' => 1
         ]);
         $page->publishSingle();
