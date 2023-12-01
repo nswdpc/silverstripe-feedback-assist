@@ -161,12 +161,14 @@ class FeedbackAssistTest extends FunctionalTest
 
         $body = $response->getBody();
 
-        $this->assertFalse(
-            strpos($body, FAContentControllerExtension::FA_INIT_URL)
+        $this->assertStringNotContainsString(
+            FAContentControllerExtension::FA_INIT_URL,
+            $body
         );
 
-        $this->assertFalse(
-            strpos($body, FAContentControllerExtension::FA_URL)
+        $this->assertStringNotContainsString(
+            FAContentControllerExtension::FA_URL,
+            $body
         );
 
     }
