@@ -23,6 +23,9 @@ class FAContentControllerExtension extends Extension
             return false;
         }
         $siteConfig = SiteConfig::current_site_config();
+        if($siteConfig->EnableFeedbackAssist == 0) {
+            return false;
+        }
         $feedbackAssistInitURL = self::FA_INIT_URL;
         $feedbackAssistURL = self::FA_URL;
         $attributes = [];
