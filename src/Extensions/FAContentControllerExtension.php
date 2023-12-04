@@ -28,7 +28,10 @@ class FAContentControllerExtension extends Extension
      */
     public function onAfterInit()
     {
-        self::provideRequirements( $this->owner->data() );
+        $page = $this->owner->data();
+        if($page instanceof SiteTree) {
+            self::provideRequirements( $this->owner->data() );
+        }
     }
 
     /**
