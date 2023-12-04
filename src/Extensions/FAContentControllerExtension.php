@@ -28,20 +28,25 @@ class FAContentControllerExtension extends Extension
      */
     public function onAfterInit()
     {
-        self::provideRequirements( $this->owner->data() );
+        $page = $this->owner->data();
+        if($page instanceof SiteTree) {
+            self::provideRequirements($page);
+        }
     }
 
     /**
      * Based on current page, provide frontend requirements (or not)
      */
     public static function provideRequirements(SiteTree $page) : bool {
-        if($page->DisableFeedbackAssist == 1) {
-            return false;
-        }
         $siteConfig = SiteConfig::current_site_config();
         if($siteConfig->EnableFeedbackAssist == 0) {
             return false;
         }
+
+        if($page->DisableFeedbackAssist == 1) {
+            return false;
+        }
+
         $feedbackAssistInitURL = self::FA_INIT_URL;
         $feedbackAssistURL = self::FA_URL;
         $attributes = [];
