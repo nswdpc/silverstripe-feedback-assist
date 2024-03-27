@@ -9,11 +9,17 @@ use Silverstripe\Forms\TextField;
 
 class FASiteConfigExtension extends DataExtension
 {
+    /**
+     * @inheritdoc
+     */
     private static $db = [
         'EnableFeedbackAssist' => 'Boolean',
         'FeedbackAssistHash'   => 'Varchar(255)'
     ];
 
+    /**
+     * @inheritdoc
+     */
     public function updateCMSFields(FieldList $fields)
     {
         $fields->addFieldToTab('Root.FeedbackAssist', CheckboxField::create('EnableFeedbackAssist', "Enable Feedback Assist on this site"));
