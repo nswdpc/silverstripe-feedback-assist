@@ -1,3 +1,5 @@
+> This repository will be archived as the Feedback Assist widget is no longer in use.
+
 # NSW Government Feedback assist for Silverstripe
 
 Add the [NSW Government Feedback Assist](https://www.digital.nsw.gov.au/digital-service-toolkit/solutions/feedback-assist) widget to your site.
